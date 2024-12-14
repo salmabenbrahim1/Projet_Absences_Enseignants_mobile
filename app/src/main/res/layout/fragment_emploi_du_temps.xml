@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5"> <!-- Couleur de fond générale -->
+
+    <!-- Bouton pour télécharger un fichier Excel -->
+
+    <TextView
+        android:id="@+id/emploi_du_temps_title"
+        android:layout_width="311dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Emploi du Temps"
+        android:textColor="#333"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/blue"
+        android:text="Télécharger Fichier Excel"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- TableLayout pour afficher les données -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="8dp"
+        android:divider="@android:color/darker_gray"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
+
+        <!-- En-tête du tableau -->
+        <TableRow
+            > <!-- Couleur d'en-tête -->
+            <TextView
+                android:text="Jour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:padding="8dp"
+            />
+            <TextView
+                android:text="Matière"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:padding="8dp"
+               />
+            <TextView
+                android:text="Heure de début"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:padding="8dp"
+               />
+            <TextView
+                android:text="Heure de fin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:padding="8dp"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</LinearLayout>

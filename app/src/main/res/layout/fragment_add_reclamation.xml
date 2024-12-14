@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="@drawable/screen"
+    tools:context=".view.AddReclamationFragment">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvAddReclamationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter une Réclamation d'Absence"
+        android:textSize="24sp"
+        android:textColor="#333"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tvDateReclamation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de l'absence"
+        android:textColor="#333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvAddReclamationTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <EditText
+        android:id="@+id/etDateReclamation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDateReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date" />
+
+    <!-- Heure -->
+    <TextView
+        android:id="@+id/tvHeureReclamation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heure de l'absence"
+        android:textColor="#333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etDateReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etHeureReclamation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvHeureReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="HH:MM"
+        android:inputType="time" />
+
+    <!-- Justification -->
+    <TextView
+        android:id="@+id/tvJustificationReclamation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Justification"
+        android:textColor="#333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etHeureReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etJustificationReclamation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvJustificationReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="Votre réclamation pour l'absence"
+        android:inputType="textMultiLine" />
+
+    <!-- Bouton Enregistrer Réclamation -->
+    <Button
+        android:id="@+id/btnSaveReclamation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/blue"
+        android:text="Enregistrer la réclamation"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etJustificationReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
